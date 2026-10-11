@@ -2,7 +2,6 @@
 
 Subject: 21CSC202J — Operating Systems Lab  
 Language: C  
-Scope: Experiments 3 through 15 only. Experiments 1 and 2 are intentionally excluded.
 
 Each experiment is in its own folder, and each manual subpart is a separate `.c` file. The source code was extracted from the uploaded lab manual and organized under descriptive filenames. All 31 files passed a GCC syntax-only check, but that does not confirm that every program’s logic or runtime output is correct.
 
@@ -64,10 +63,3 @@ Each experiment is in its own folder, and each manual subpart is a separate `.c`
 ### Experiment-15-Directory-Organization
 - `Experiment-15-Directory-Organization/15A_Single_Level_Directory.c` — Single-Level Directory - EV Charging Station Maintenance Record System
 - `Experiment-15-Directory-Organization/15B_Two_Level_Directory.c` — Two-Level Directory - EV Charging Station Maintenance Record System
-
-## Notes
-
-- Keep each subpart in its own source file because each program may define its own `main()` function.
-- Do not upload generated executables such as `a.out` or `.exe` files unless your instructor requests them.
-- Several programs use POSIX threads/semaphores or Linux-specific APIs. They are intended for a Linux/Ubuntu environment. Programs using pthreads generally need to be compiled with `-pthread`.
-- This package organizes the code as shown in the manual; please test each program before submitting if your instructor requires working outputs.
