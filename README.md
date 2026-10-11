@@ -1,4 +1,4 @@
-# Operating Systems Lab Programs — Experiments 3–15
+# Operating Systems Lab Programs
 
 Subject: 21CSC202J — Operating Systems Lab  
 Language: C  
