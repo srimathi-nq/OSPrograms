@@ -1,25 +1,24 @@
 # Reader-Writer Problem
 
-Allowing concurrent read access while ensuring updates are performed with exclusive write access.
+This folder contains C examples for reader-writer problem, with a brief description and practical use case for each program.
 
-## Programs
+## Programs and Use Cases
 
-- `Reader_Writer_Problem.c`
+### `Reader_Writer_Problem.c`
+
+**What it demonstrates:** Uses a POSIX read-write lock so traveler threads can read the available-seat count while an employee thread updates it exclusively.
+
+**Use case:** Models a flight seating board or shared status page where multiple users read data and an authorized updater changes it.
 
 ## Compile and Run
 
-For a standard C program:
+Run these commands from this folder in Linux or WSL. Compile each source file separately because each has its own `main()` function.
+
+### `Reader_Writer_Problem.c`
 
 ```bash
-gcc program.c -o program
-./program
+gcc Reader_Writer_Problem.c -o reader_writer_problem -pthread
+./reader_writer_problem
 ```
 
-For programs that use POSIX threads:
-
-```bash
-gcc program.c -o program -pthread
-./program
-```
-
-Replace `program.c` with the source filename you want to run. Some programs require Linux or WSL. Compile each source file separately.
+These examples use POSIX threads and/or semaphores and should be compiled in Linux or WSL with GCC.

@@ -1,25 +1,24 @@
-# Dining Philosophers
+# Dining Philosophers & Shared Resources
 
-Exploring how concurrent participants coordinate access to shared resources.
+This folder contains C examples for dining philosophers & shared resources, with a brief description and practical use case for each program.
 
-## Programs
+## Programs and Use Cases
 
-- `Dining_Philosophers.c`
+### `Dining_Philosophers.c`
+
+**What it demonstrates:** Uses semaphores to coordinate four train threads requesting pairs of adjacent rail segments. The code orders resource acquisition to avoid circular wait.
+
+**Use case:** Illustrates the same shared-resource coordination issues as the dining-philosophers problem, using train routes and rail segments as the scenario.
 
 ## Compile and Run
 
-For a standard C program:
+Run these commands from this folder in Linux or WSL. Compile each source file separately because each has its own `main()` function.
+
+### `Dining_Philosophers.c`
 
 ```bash
-gcc program.c -o program
-./program
+gcc Dining_Philosophers.c -o dining_philosophers -pthread
+./dining_philosophers
 ```
 
-For programs that use POSIX threads:
-
-```bash
-gcc program.c -o program -pthread
-./program
-```
-
-Replace `program.c` with the source filename you want to run. Some programs require Linux or WSL. Compile each source file separately.
+These examples use POSIX threads and/or semaphores and should be compiled in Linux or WSL with GCC.

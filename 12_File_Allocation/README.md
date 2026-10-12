@@ -1,26 +1,35 @@
 # File Allocation
 
-Representing sequential and indexed allocation methods for organizing file storage.
+This folder contains C examples for file allocation, with a brief description and practical use case for each program.
 
-## Programs
+## Programs and Use Cases
 
-- `Indexed_File_Allocation.c`
-- `Sequential_File_Allocation.c`
+### `Sequential_File_Allocation.c`
+
+**What it demonstrates:** Accepts a starting block and size for each sample file, checks that the blocks are free and within range, and allocates consecutive blocks.
+
+**Use case:** Demonstrates contiguous/sequential disk-block allocation for files.
+
+### `Indexed_File_Allocation.c`
+
+**What it demonstrates:** Assigns an index block to a file and records the data-block numbers allocated to that file.
+
+**Use case:** Demonstrates indexed file allocation, in which an index block stores references to the file’s data blocks.
 
 ## Compile and Run
 
-For a standard C program:
+Run these commands from this folder in Linux or WSL. Compile each source file separately because each has its own `main()` function.
+
+### `Sequential_File_Allocation.c`
 
 ```bash
-gcc program.c -o program
-./program
+gcc Sequential_File_Allocation.c -o sequential_file_allocation
+./sequential_file_allocation
 ```
 
-For programs that use POSIX threads:
+### `Indexed_File_Allocation.c`
 
 ```bash
-gcc program.c -o program -pthread
-./program
+gcc Indexed_File_Allocation.c -o indexed_file_allocation
+./indexed_file_allocation
 ```
-
-Replace `program.c` with the source filename you want to run. Some programs require Linux or WSL. Compile each source file separately.

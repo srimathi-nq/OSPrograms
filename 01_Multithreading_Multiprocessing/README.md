@@ -1,26 +1,37 @@
 # Multithreading & Multiprocessing
 
-Creating concurrent threads and exploring processor affinity while processing separate sets of student data.
+This folder contains C examples for multithreading & multiprocessing, with a brief description and practical use case for each program.
 
-## Programs
+## Programs and Use Cases
 
-- `Multiprocessor_Multithreading.c`
-- `Single_Processor_Multithreading.c`
+### `Single_Processor_Multithreading.c`
+
+**What it demonstrates:** Processes two students’ marks using separate POSIX threads, then displays each student’s total and average.
+
+**Use case:** Useful as a small example of dividing independent work into threads within one program.
+
+### `Multiprocessor_Multithreading.c`
+
+**What it demonstrates:** Processes each student’s marks on a worker thread and requests CPU affinity for different cores. It also reports the CPU core observed by each thread.
+
+**Use case:** Illustrates thread affinity and parallel task distribution on a Linux machine. CPU-affinity behavior depends on available cores and permissions.
 
 ## Compile and Run
 
-For a standard C program:
+Run these commands from this folder in Linux or WSL. Compile each source file separately because each has its own `main()` function.
+
+### `Single_Processor_Multithreading.c`
 
 ```bash
-gcc program.c -o program
-./program
+gcc Single_Processor_Multithreading.c -o single_processor_multithreading -pthread
+./single_processor_multithreading
 ```
 
-For programs that use POSIX threads:
+### `Multiprocessor_Multithreading.c`
 
 ```bash
-gcc program.c -o program -pthread
-./program
+gcc Multiprocessor_Multithreading.c -o multiprocessor_multithreading -pthread
+./multiprocessor_multithreading
 ```
 
-Replace `program.c` with the source filename you want to run. Some programs require Linux or WSL. Compile each source file separately.
+These examples use POSIX threads and/or semaphores and should be compiled in Linux or WSL with GCC.
