@@ -137,8 +137,8 @@ Each topic folder contains its own README with a description, list of programs, 
 Clone the repository:
 
 ```bash
-git clone https://github.com/srimathi-nq/operating-systems-mini-projects.git
-cd operating-systems-mini-projects
+git clone https://github.com/srimathi-nq/os-mini-projects.git
+cd os-mini-projects
 ```
 
 Move into the topic folder that contains the program you want to run. For example:
