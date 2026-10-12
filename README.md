@@ -1,65 +1,168 @@
-# Operating Systems Lab Programs
+# Operating Systems — Mini Projects
 
-Subject: 21CSC202J — Operating Systems Lab  
-Language: C  
+Processes • Threads • Synchronization • Deadlocks • Scheduling
 
-Each experiment is in its own folder, and each manual subpart is a separate `.c` file. The source code was extracted from the uploaded lab manual and organized under descriptive filenames. All 31 files passed a GCC syntax-only check, but that does not confirm that every program’s logic or runtime output is correct.
+A collection of Operating Systems concepts implemented in C through practical, real-world scenarios.
 
-## Experiments included
+## About
 
-### Experiment-03-Multithreading
-- `Experiment-03-Multithreading/3A_Single_Processor_Multithreading.c` — Single Processor Multithreading - Student Result Processing and Report Generation System
-- `Experiment-03-Multithreading/3B_Multiprocessor_Multithreading.c` — Multiprocessor Multithreading - Student Result Processing and Report Generation System
+This repository explores core Operating Systems concepts through small C programs built around familiar scenarios. The examples show how processes and threads work together, how shared resources are protected, how deadlocks can occur, and how scheduling and memory policies influence system behavior.
 
-### Experiment-04-Mutual-Exclusion
-- `Experiment-04-Mutual-Exclusion/4A_Mutex_Mutual_Exclusion.c` — Mutual Exclusion using Mutex - College Computer Lab Management System
-- `Experiment-04-Mutual-Exclusion/4B_Semaphore_Mutual_Exclusion.c` — Mutual Exclusion using Semaphore - College Computer Lab Management System
-- `Experiment-04-Mutual-Exclusion/4C_Semaphore_and_Monitor.c` — Mutual Exclusion using Semaphore and Monitor - College Computer Lab Management System
+## Concepts & Use Cases
 
-### Experiment-05-Reader-Writer
-- `Experiment-05-Reader-Writer/5_Reader_Writer_Problem.c` — Reader-Writer Problem - Live Flight Status and Seating Board System
+| # | Concept | Use Case |
+|---|---|---|
+| 01 | Multithreading & Multiprocessing | Student Result Processing |
+| 02 | Mutual Exclusion | College Computer Lab Management |
+| 03 | Reader-Writer Problem | Flight Status and Seating Board |
+| 04 | Dining Philosophers | Shared Resource Coordination |
+| 05 | Deadlocks & Avoidance | Parking-Lane Coordination |
+| 06 | CPU Scheduling | College Printing Queue |
+| 07 | Priority & Round Robin | Hostel Laundry Scheduler |
+| 08 | FIFO Page Replacement | Product Cache and Request Queues |
+| 09 | LRU & LFU Page Replacement | Cache Replacement Strategies |
+| 10 | Memory Management | Camera Buffer Allocation |
+| 11 | Disk Scheduling | Retail Billing and Transaction Logs |
+| 12 | File Allocation | Sequential and Indexed Storage |
+| 13 | Directory Organization | Maintenance Record Archive |
 
-### Experiment-06-Dining-Philosopher
-- `Experiment-06-Dining-Philosopher/6_Dining_Philosopher_Problem.c` — Dining Philosopher Problem - Automated Railway Junction Dispatcher
+## Core Topics
 
-### Experiment-07-Bankers-Deadlock-Avoidance
-- `Experiment-07-Bankers-Deadlock-Avoidance/7A_Deadlock_Demonstration.c` — Deadlock Demonstration - Car Parking Deadlock
-- `Experiment-07-Bankers-Deadlock-Avoidance/7B_Deadlock_Avoidance.c` — Deadlock Avoidance - Car Parking Deadlock Avoidance
+```text
+PROCESSES & THREADS
+        ↓
+MULTITHREADING
+        ↓
+SYNCHRONIZATION
+        ↓
+RESOURCE MANAGEMENT
+        ↓
+DEADLOCKS
+        ↓
+CPU SCHEDULING
+        ↓
+MEMORY & PAGE REPLACEMENT
+        ↓
+DISK SCHEDULING & FILE ORGANIZATION
+```
 
-### Experiment-08-FCFS-SJF-Scheduling
-- `Experiment-08-FCFS-SJF-Scheduling/8A_FCFS_Scheduling.c` — First-Come, First-Served Scheduling - College Printing Queue
-- `Experiment-08-FCFS-SJF-Scheduling/8B_SJF_Scheduling.c` — Shortest Job First Scheduling - College Printing Queue
+## Multithreading & Multiprocessing
 
-### Experiment-09-Priority-Round-Robin-Scheduling
-- `Experiment-09-Priority-Round-Robin-Scheduling/9A_Round_Robin_Scheduling.c` — Round Robin Scheduling - Hostel Laundry Machine Scheduler
-- `Experiment-09-Priority-Round-Robin-Scheduling/9B_Priority_Scheduling.c` — Priority Scheduling - Hostel Laundry Machine Scheduler
-- `Experiment-09-Priority-Round-Robin-Scheduling/9C_Priority_Round_Robin_Scheduling.c` — Priority Scheduling with Round Robin - Hostel Laundry Machine Scheduler
+Creating concurrent threads and exploring processor affinity while processing separate sets of student data.
 
-### Experiment-10-FIFO-Page-Replacement
-- `Experiment-10-FIFO-Page-Replacement/10A_FIFO_Warehouse_Request_Queue.c` — FIFO Warehouse Product Request Queue
-- `Experiment-10-FIFO-Page-Replacement/10B_Product_Cache_Page_Fault.c` — Product Cache Page Fault Demonstration
-- `Experiment-10-FIFO-Page-Replacement/10C_FIFO_Page_Replacement_Hits_Faults.c` — FIFO Page Replacement with Hits and Faults
+## Mutual Exclusion
 
-### Experiment-11-LRU-LFU-Page-Replacement
-- `Experiment-11-LRU-LFU-Page-Replacement/11A_LRU_Page_Replacement.c` — LRU Page Replacement - SMART E-LIBRARY MEMORY MANAGER
-- `Experiment-11-LRU-LFU-Page-Replacement/11B_LFU_Page_Replacement.c` — LFU Page Replacement - SMART E-LIBRARY MEMORY MANAGER
+Using mutexes, semaphores and monitor-style locking to coordinate access to a shared resource.
 
-### Experiment-12-Best-Worst-Fit-Memory-Management
-- `Experiment-12-Best-Worst-Fit-Memory-Management/12A_Best_Fit_Memory_Allocation.c` — Best Fit Memory Allocation - CCTV BufferFit
-- `Experiment-12-Best-Worst-Fit-Memory-Management/12B_Worst_Fit_Memory_Allocation.c` — Worst Fit Memory Allocation - CCTV BufferFit
-- `Experiment-12-Best-Worst-Fit-Memory-Management/12C_Best_Worst_Fit_Comparison.c` — Best Fit and Worst Fit Comparison - CCTV BufferFit
+## Reader-Writer Problem
 
-### Experiment-13-Disk-Scheduling
-- `Experiment-13-Disk-Scheduling/13A_FCFS_Disk_Scheduling.c` — FCFS Disk Scheduling - Retail Billing and Transaction Log Scheduler
-- `Experiment-13-Disk-Scheduling/13B_SSTF_Disk_Scheduling.c` — SSTF Disk Scheduling - Retail Billing and Transaction Log Scheduler
-- `Experiment-13-Disk-Scheduling/13C_SCAN_Disk_Scheduling.c` — SCAN Disk Scheduling - Retail Billing and Transaction Log Scheduler
-- `Experiment-13-Disk-Scheduling/13D_C_SCAN_Disk_Scheduling.c` — C-SCAN Disk Scheduling - Retail Billing and Transaction Log Scheduler
-- `Experiment-13-Disk-Scheduling/13E_LOOK_Disk_Scheduling.c` — LOOK Disk Scheduling - Retail Billing and Transaction Log Scheduler
+Allowing concurrent read access while ensuring updates are performed with exclusive write access.
 
-### Experiment-14-File-Allocation
-- `Experiment-14-File-Allocation/14A_Sequential_File_Allocation.c` — Sequential File Allocation - ReceiptVault Retail Billing Archive
-- `Experiment-14-File-Allocation/14B_Indexed_File_Allocation.c` — Indexed File Allocation - ReceiptVault Retail Billing Archive
+## Dining Philosophers
 
-### Experiment-15-Directory-Organization
-- `Experiment-15-Directory-Organization/15A_Single_Level_Directory.c` — Single-Level Directory - EV Charging Station Maintenance Record System
-- `Experiment-15-Directory-Organization/15B_Two_Level_Directory.c` — Two-Level Directory - EV Charging Station Maintenance Record System
+Exploring how multiple participants coordinate access to limited shared resources without conflicting resource use.
+
+## Deadlocks
+
+Demonstrating resource conflicts and a consistent-order approach to avoiding a deadlock scenario.
+
+## CPU Scheduling
+
+Implementing scheduling approaches such as First-Come, First-Served (FCFS) and Shortest Job First (SJF).
+
+## Priority & Round Robin
+
+Exploring priority-based scheduling and time-sliced execution of competing tasks.
+
+## FIFO Page Replacement
+
+Demonstrating FIFO replacement behavior, page faults and request queues.
+
+## LRU & LFU Page Replacement
+
+Comparing Least Recently Used (LRU) and Least Frequently Used (LFU) replacement strategies.
+
+## Memory Management
+
+Comparing Best Fit and Worst Fit methods for assigning memory blocks to requests.
+
+## Disk Scheduling
+
+Exploring FCFS, SSTF, SCAN, C-SCAN and LOOK strategies for ordering disk requests.
+
+## File Allocation
+
+Representing sequential and indexed allocation methods for organizing file storage.
+
+## Directory Organization
+
+Representing single-level and two-level directory structures.
+
+## Tech Stack
+
+- C
+- POSIX Threads
+- Semaphores
+- Mutexes
+- GCC
+- Linux / Ubuntu / WSL
+- Git & GitHub
+
+## Repository Structure
+
+```text
+operating-systems-mini-projects/
+├── 01_Multithreading_Multiprocessing/
+├── 02_Mutual_Exclusion/
+├── 03_Reader_Writer/
+├── 04_Dining_Philosophers/
+├── 05_Deadlocks/
+├── 06_CPU_Scheduling/
+├── 07_Priority_Round_Robin/
+├── 08_FIFO_Page_Replacement/
+├── 09_LRU_LFU_Page_Replacement/
+├── 10_Memory_Management/
+├── 11_Disk_Scheduling/
+├── 12_File_Allocation/
+├── 13_Directory_Organization/
+├── README.md
+├── LICENSE
+└── .gitignore
+```
+
+Each topic folder contains its own README with a description, list of programs, and basic compile commands. Compile each C file separately because each source file has its own `main()` function.
+
+## Running the Programs
+
+Clone the repository:
+
+```bash
+git clone https://github.com/srimathi-nq/operating-systems-mini-projects.git
+cd operating-systems-mini-projects
+```
+
+Move into the topic folder that contains the program you want to run. For example:
+
+```bash
+cd 06_CPU_Scheduling
+gcc FCFS_Scheduling.c -o fcfs
+./fcfs
+```
+
+For programs that use POSIX threads:
+
+```bash
+cd ../01_Multithreading_Multiprocessing
+gcc Single_Processor_Multithreading.c -o multithreading -pthread
+./multithreading
+```
+
+Use the compile command shown in the relevant topic README. Linux or WSL is recommended for programs that use POSIX threads, semaphores or CPU-affinity APIs.
+
+## Purpose
+
+The aim is to connect Operating Systems theory with practical scenarios and make the behavior of processes, threads, synchronization, resource allocation, and scheduling easier to explore.
+
+The examples are intended for learning and experimentation. Review the source code and test its behavior with suitable inputs before relying on its output.
+
+Built with C • Threads • Synchronization • Scheduling

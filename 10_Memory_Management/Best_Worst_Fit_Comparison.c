@@ -10,4 +10,4 @@ void run(int w){
     }
     printf("Successful=%d, Failed=%d\n",s,f);
 }
-int main(){printf("Member 3 - CCTV BufferFit\n");run(1);run(2);return 0;}
+int main(){printf("Best Fit vs Worst Fit: CCTV Buffer Allocation\n");run(1);run(2);return 0;}
